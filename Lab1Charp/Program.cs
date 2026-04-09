@@ -6,6 +6,8 @@ namespace LabWork1
     {
         static void Main()
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.InputEncoding = System.Text.Encoding.UTF8;
             bool exit = false;
             while (!exit)
             {
@@ -109,9 +111,9 @@ namespace LabWork1
         }
         static void Task3()
         {
-            Console.Write(" x: ");
+            Console.Write("x: ");
             string inputX = Console.ReadLine();
-            Console.Write(" y: ");
+            Console.Write("y: ");
             string inputY = Console.ReadLine();
 
             if (double.TryParse(inputX, out double x) && double.TryParse(inputY, out double y))
@@ -136,12 +138,12 @@ namespace LabWork1
         }
         static void Task4()
         {
-            Console.Write("к - colo, п - rectangle, т - triangle: ");
+            Console.Write("c - circle, p - rectangle, t - triangle: ");
             string figure = Console.ReadLine().Trim().ToLower();
 
             switch (figure)
             {
-                case "к":
+                case "c":
                     Console.Write(" r: ");
                     if (double.TryParse(Console.ReadLine(), out double r) && r > 0)
                     {
@@ -156,7 +158,7 @@ namespace LabWork1
                     }
                     break;
 
-                case "п":
+                case "p":
                     Console.Write("a: ");
                     bool isAValid = double.TryParse(Console.ReadLine(), out double rectA);
                     Console.Write(" b: ");
@@ -175,7 +177,7 @@ namespace LabWork1
                     }
                     break;
 
-                case "т":
+                case "t":
                     Console.Write(" a: ");
                     bool isTriAValid = double.TryParse(Console.ReadLine(), out double triA);
                     Console.Write(" b: ");
